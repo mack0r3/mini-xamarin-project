@@ -1,0 +1,40 @@
+﻿<resources>
+
+  <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/appPrimaryColor</item>
+    <item name="colorPrimaryDark">#2596ED</item>
+    <item name="colorAccent">#2596ED</item>
+  </style>
+
+  <style name="editText_theme">
+    <item name="android:imeOptions">actionNext</item>
+    <item name="android:singleLine">true</item>
+    <item name="colorControlNormal">@color/appPrimaryColor</item>
+    <item name="colorControlActivated">@color/appPrimaryColor</item>
+    <item name="colorControlHighlight">@color/appPrimaryColor</item>
+    <item name="android:textColorPrimary">#000000</item>
+    <item name="android:textSize">@dimen/editText_text_size</item>
+  </style>
+
+  <style name="editText_style">
+    <item name ="android:theme">@style/editText_theme</item>
+    <item name ="android:paddingTop">4dp</item>
+  </style>
+
+  <style name="loginButton_style" parent="@style/Widget.AppCompat.Button.Colored"    >
+    <item name="android:layout_marginRight">30dp</item>
+    <item name="android:layout_marginLeft">30dp</item>
+    <item name="android:layout_marginTop">10dp</item>
+    <item name="android:layout_marginBottom">20dp</item>
+    <item name="android:textSize">@dimen/button_text_size</item>
+  </style>
+
+  <style name="registerButton_style" parent="@style/Widget.AppCompat.Button.Colored"    >
+    <item name="android:layout_marginRight">30dp</item>
+    <item name="android:layout_marginLeft">30dp</item>
+    <item name="android:layout_marginTop">10dp</item>
+    <item name="android:layout_marginBottom">20dp</item>
+    <item name="android:textSize">@dimen/button_text_size</item>
+  </style>
+
+</resources>

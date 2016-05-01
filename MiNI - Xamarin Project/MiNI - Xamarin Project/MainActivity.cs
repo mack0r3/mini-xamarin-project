@@ -8,24 +8,36 @@ using Android.OS;
 
 namespace MiNI___Xamarin_Project
 {
-    [Activity(Label = "MiNI___Xamarin_Project", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Initial Activity", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        int count = 1;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            Button LoginButton = FindViewById<Button>(Resource.Id.Main_LoginButton);
+            LoginButton.Click += LoginButton_Click;
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+
+            Button RegisterButton = FindViewById<Button>(Resource.Id.Main_RegisterButton);
+            RegisterButton.Click += RegisterButton_Click;
+
         }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(RegisterActivity));
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(LoginActivity));
+        }
+
+     
     }
 }
 

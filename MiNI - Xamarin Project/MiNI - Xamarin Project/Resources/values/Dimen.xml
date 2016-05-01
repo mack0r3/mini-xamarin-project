@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <!--TEXT EDITS-->
+  <dimen name="editText_text_size">8pt</dimen>
+  
+  
+  <!--BUTTONS-->
+  <dimen name="button_text_size">10pt</dimen>
+  
+  
+  
+</resources>
