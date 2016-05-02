@@ -3,7 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF333333"
     android:weightSum="100">
 <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
     <LinearLayout
@@ -17,7 +16,7 @@
         android:layout_height="0dp"
         android:layout_weight="20">
         <ImageView
-            android:src="@drawable/shapes"
+            android:src="@drawable/logo"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="fitCenter"
@@ -34,7 +33,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="40"
-        android:weightSum="100">
+        android:weightSum="100"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp">
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -67,6 +68,12 @@
                 android:hint="Password" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
+<!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" />
     <Button
         android:id="@+id/BtnLogin"
         android:layout_width="match_parent"

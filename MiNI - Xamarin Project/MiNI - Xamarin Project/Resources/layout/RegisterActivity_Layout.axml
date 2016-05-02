@@ -1,147 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF333333"
-    android:weightSum="100">
-<!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="insideInset">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="23">
-        <ImageView
-            android:src="@drawable/shapes"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scaleType="fitCenter"
-            android:id="@+id/imageView1" />
-    </LinearLayout>
-<!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:layout_gravity="center">
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="47">
-            <EditText
-                android:id="@+id/TxtFirstName"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/editText_style"
-                android:inputType="text"
-                android:hint="First Name" />
-        </android.support.design.widget.TextInputLayout>
+        android:layout_height="match_parent">
     <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitCenter"
+                android:id="@+id/imageView1" />
+        </LinearLayout>
+    <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="47">
-            <EditText
-                android:id="@+id/TxtLastName"
-                android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                style="@style/editText_style"
-                android:inputType="text"
-                android:hint="Last Name" />
-        </android.support.design.widget.TextInputLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="40"
-        android:weightSum="150">
+                android:layout_weight="47"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp">
+                <EditText
+                    android:id="@+id/TxtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/editText_style"
+                    android:inputType="text"
+                    android:hint="First Name" />
+            </android.support.design.widget.TextInputLayout>
+        <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="47"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp">
+                <EditText
+                    android:id="@+id/TxtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    style="@style/editText_style"
+                    android:inputType="text"
+                    android:hint="Last Name" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6" />
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="47">
-            <EditText
-                android:id="@+id/TxtEmailAdress"
+            android:layout_height="150dp"
+            android:weightSum="150">
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                style="@style/editText_style"
-                android:inputType="textEmailAddress"
-                android:hint="E-mail Adress" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="0dp"
+                android:layout_weight="6" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="47"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp">
+                <EditText
+                    android:id="@+id/TxtEmailAdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/editText_style"
+                    android:inputType="textEmailAddress"
+                    android:hint="E-mail Adress" />
+            </android.support.design.widget.TextInputLayout>
+        <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="47"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp">
+                <EditText
+                    android:id="@+id/TxtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/editText_style"
+                    android:inputType="textPassword"
+                    android:hint="Password" />
+            </android.support.design.widget.TextInputLayout>
+        <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="47"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp">
+                <EditText
+                    android:id="@+id/TxtConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/editText_style"
+                    android:inputType="textPassword"
+                    android:hint="Confirm Password" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
     <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6" />
-        <android.support.design.widget.TextInputLayout
+            android:layout_height="10dp" />
+        <Button
+            android:id="@+id/BtnRegister"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="47">
-            <EditText
-                android:id="@+id/TxtPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                style="@style/editText_style"
-                android:inputType="textPassword"
-                android:hint="Password" />
-        </android.support.design.widget.TextInputLayout>
-    <!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6" />
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="47">
-            <EditText
-                android:id="@+id/TxtConfirmPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                style="@style/editText_style"
-                android:inputType="textPassword"
-                android:hint="Confirm Password" />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="Register"
+            style="@style/registerButton_style" />
     </LinearLayout>
-<!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <Button
-        android:id="@+id/BtnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="16"
-        android:text="Register"
-        style="@style/registerButton_style" />
-</LinearLayout>
+</ScrollView>
