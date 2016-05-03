@@ -1,85 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="100">
-<!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="insideInset">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10" />
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20">
-        <ImageView
-            android:src="@drawable/logo"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scaleType="fitCenter"
-            android:id="@+id/imageView1" />
-    </LinearLayout>
-<!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5" />
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="40"
-        android:weightSum="100"
-        android:layout_marginRight="32dp"
-        android:layout_marginLeft="32dp">
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="47">
-            <EditText
-                android:id="@+id/TxtEmailAdress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                style="@style/editText_style"
-                android:inputType="textEmailAddress"
-                android:hint="E-mail Adress" />
-        </android.support.design.widget.TextInputLayout>
+        android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6" />
-        <android.support.design.widget.TextInputLayout
+            android:layout_height="10dp" />
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="47">
-            <EditText
-                android:id="@+id/TxtPassword"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitCenter"
+                android:id="@+id/imageView1" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="100">
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                style="@style/editText_style"
-                android:inputType="textPassword"
-                android:hint="Password" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="0dp"
+                android:layout_weight="47"
+                style="@style/textInput_style">
+                <EditText
+                    android:id="@+id/TxtEmailAdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/editText_style"
+                    android:inputType="textEmailAddress"
+                    android:hint="E-mail Adress" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="47"
+                style="@style/textInput_style">
+                <EditText
+                    android:id="@+id/TxtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/editText_style"
+                    android:inputType="textPassword"
+                    android:hint="Password" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+        <Button
+            android:id="@+id/BtnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Login"
+            style="@style/loginButton_style" />
+        <Button
+            android:id="@+id/BtnLoginToRegister"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Don't have an account? Create one."
+            style="@style/registerAndloginSwapButton_style"
+            android:layout_gravity="center" />
     </LinearLayout>
-<!--TEN LAYOUT ROBI ZA PUSTE MIEJSCE !(PEWNIE MOZNA LADNIEJ)-->
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10" />
-    <Button
-        android:id="@+id/BtnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="13"
-        android:text="Login"
-        style="@style/loginButton_style" />
-</LinearLayout>
+</ScrollView>

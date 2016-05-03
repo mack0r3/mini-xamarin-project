@@ -23,8 +23,8 @@
   </style>
 
   <style name="loginButton_style" parent="@style/Widget.AppCompat.Button.Colored"    >
-    <item name="android:layout_marginRight">30dp</item>
-    <item name="android:layout_marginLeft">30dp</item>
+    <item name="android:layout_marginRight">@dimen/appPrimaryMargin</item>
+    <item name="android:layout_marginLeft">@dimen/appPrimaryMargin</item>
     <item name="android:layout_marginTop">10dp</item>
     <item name="android:layout_marginBottom">20dp</item>
     <item name="android:textSize">@dimen/button_text_size</item>
@@ -32,11 +32,24 @@
   </style>
 
   <style name="registerButton_style" parent="@style/Widget.AppCompat.Button.Colored"    >
-    <item name="android:layout_marginRight">32dp</item>
-    <item name="android:layout_marginLeft">32dp</item>
+    <item name="android:layout_marginRight">@dimen/appPrimaryMargin</item>
+    <item name="android:layout_marginLeft">@dimen/appPrimaryMargin</item>
     <item name="android:layout_marginTop">10dp</item>
-    <item name="android:layout_marginBottom">20dp</item>
     <item name="android:textSize">@dimen/button_text_size</item>
   </style>
 
+  <style name="registerAndloginSwapButton_style" parent="@style/Widget.AppCompat.Button.Borderless">   
+    <item name="android:textSize">@dimen/smallButton_text_size</item>
+    <item name="android:layout_marginRight">@dimen/appPrimaryMargin</item>
+    <item name="android:layout_marginLeft">@dimen/appPrimaryMargin</item>
+    <item name="android:textColor">#FFFFFF</item>
+    <item name="android:textAllCaps">false</item>
+  </style>
+
+  <style name="textInput_style">
+    <item name="android:layout_marginRight">@dimen/appPrimaryMargin</item>
+    <item name="android:layout_marginLeft">@dimen/appPrimaryMargin</item>   
+  </style>
+
 </resources>
+
