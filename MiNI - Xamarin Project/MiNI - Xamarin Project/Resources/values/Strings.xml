@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mainAppColor">#2596ED</string>
-    <string name="ApplicationName">MiNI - Xamarin Project</string>
+  <string name="mainAppColor">#2596ED</string>
+  <string name="ApplicationName">MiNI - Xamarin Project</string>
+  
+  <!--LoginActivityString-->
+  <string name="loginButtonText">LOGIN</string>
 </resources>

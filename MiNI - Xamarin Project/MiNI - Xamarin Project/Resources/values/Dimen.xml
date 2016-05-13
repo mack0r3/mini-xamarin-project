@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
    <!--UNIVERSAL-->
-  <dimen name="appPrimaryMargin">20dp</dimen>
+  <dimen name="appPrimaryMargin">16dp</dimen>
   
   <!--TEXT EDITS-->
   <dimen name="editText_text_size">8pt</dimen>
