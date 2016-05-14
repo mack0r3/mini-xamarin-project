@@ -2,9 +2,9 @@
 <resources>
   <color name="appPrimaryColor">#2196F3</color>
   <color name="appBackgroundColor">#333333</color>
-  
+
   <!-- TextColors -->
   <color name="primaryTextColor">#FFFFFFFF</color>
   <color name="secondaryTextColor">#B3FFFFFF</color>
-  <color name="hintTextColor">#80FFFFFF</color>  
+  <color name="hintTextColor">#80FFFFFF</color>
 </resources>

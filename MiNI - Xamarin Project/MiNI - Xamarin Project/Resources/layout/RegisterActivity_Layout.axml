@@ -1,156 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:scrollbars="vertical"
-    android:scrollbarStyle="insideInset">
+    android:padding="@dimen/appPrimaryMargin">
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/registerForm"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/fullNameTextInputsRow"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
-            <ImageView
-                android:src="@drawable/logo"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="fitCenter"
-                android:id="@+id/imageView1" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/usernameTextInputLayout"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="47"
-                style="@style/textInput_style">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/floatingLabelTextInput_style">
                 <EditText
-                    android:id="@+id/TxtFirstName"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    style="@style/editText_style"
-                    android:inputType="text"
-                    android:hint="First Name" />
-            </android.support.design.widget.TextInputLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="47"
-                style="@style/textInput_style">
-                <EditText
-                    android:id="@+id/TxtLastName"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    style="@style/editText_style"
-                    android:inputType="text"
-                    android:hint="Last Name" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:weightSum="175">
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="25" />
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="47"
-                style="@style/textInput_style">
-                <EditText
-                    android:id="@+id/TxtEmailAdress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    style="@style/editText_style"
-                    android:inputType="textEmailAddress"
-                    android:hint="E-mail Adress" />
+                    android:textColor="@color/primaryTextColor"
+                    android:hint="@string/firstNameInputLabelText" />
             </android.support.design.widget.TextInputLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6" />
             <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="47"
-                style="@style/textInput_style">
+                android:id="@+id/usernameTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/floatingLabelTextInput_style">
                 <EditText
-                    android:id="@+id/TxtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    style="@style/editText_style"
-                    android:inputType="textPassword"
-                    android:hint="Password" />
+                    android:textColor="@color/primaryTextColor"
+                    android:hint="@string/lastNameInputLabelText" />
             </android.support.design.widget.TextInputLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6" />
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="47"
-                style="@style/textInput_style">
-                <EditText
-                    android:id="@+id/TxtConfirmPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    style="@style/editText_style"
-                    android:inputType="textPassword"
-                    android:hint="Confirm Password" />
-            </android.support.design.widget.TextInputLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6" />
         </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBetweenInputFields"
+            android:theme="@style/floatingLabelTextInput_style">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:hint="@string/emailInputLabelText" />
+        </android.support.design.widget.TextInputLayout>
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/passwordTextInputsRow"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
-        <Button
-            android:id="@+id/BtnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:text="Register"
-            style="@style/registerButton_style" />
-        <Button
-            android:id="@+id/BtnRegisterToLogin"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Already have an account? Log in."
-            style="@style/registerAndloginSwapButton_style"
-            android:layout_gravity="center" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBetweenInputFields"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/passwordTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/floatingLabelTextInput_style">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:hint="@string/passwordInputLabelText" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/confirmPasswordTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/floatingLabelTextInput_style">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:hint="@string/confirmPasswordInputLabelText" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
     </LinearLayout>
-</ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/AppTheme.Button"
+        android:text="@string/registerButtonText" />
+</RelativeLayout>

@@ -2,7 +2,17 @@
 <resources>
   <string name="mainAppColor">#2596ED</string>
   <string name="ApplicationName">MiNI - Xamarin Project</string>
-  
-  <!--LoginActivityString-->
+
+  <!--Login Activity Strings-->
   <string name="loginButtonText">LOGIN</string>
+  <string name="usernameInputLabelText">Username</string>
+  <string name="passwordInputLabelText">Password</string>
+  
+  <!--Register Activity Strings-->
+  <string name="registerButtonText">REGISTER</string>
+  <string name="registerButtonText">Register</string>
+  <string name="firstNameInputLabelText">First name</string>
+  <string name="lastNameInputLabelText">Last name</string>
+  <string name="emailInputLabelText">Email</string>
+  <string name="confirmPasswordInputLabelText">Confirm password</string>
 </resources>

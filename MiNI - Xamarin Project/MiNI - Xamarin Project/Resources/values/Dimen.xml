@@ -1,15 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-   <!--UNIVERSAL-->
+   <!-- Universal -->
   <dimen name="appPrimaryMargin">16dp</dimen>
-  
-  <!--TEXT EDITS-->
-  <dimen name="editText_text_size">8pt</dimen>
-  
-  
-  <!--BUTTONS-->
-  <dimen name="button_text_size">8pt</dimen>
-  <dimen name="smallButton_text_size">7pt</dimen>
-  
+
+  <!-- Login/Register screen -->
+  <dimen name="marginBetweenInputFields">16dp</dimen>
+  <dimen name="logRegButtonMarginTop">32dp</dimen>
   
 </resources>
