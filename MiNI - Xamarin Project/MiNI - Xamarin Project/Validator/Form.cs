@@ -14,5 +14,11 @@ namespace MiNI___Xamarin_Project.Validator
 {
     class Form
     {
+        private List<Field> mFields = new List<Field>();
+
+        public void AddField(Field field)
+        {
+            mFields.Add(field);
+        }
     }
 }

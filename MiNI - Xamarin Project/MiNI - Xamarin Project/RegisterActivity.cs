@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
 using Android.Support.Design.Widget;
+using MiNI___Xamarin_Project.Validator;
 
 namespace MiNI___Xamarin_Project
 {
@@ -23,11 +24,16 @@ namespace MiNI___Xamarin_Project
         private TextInputLayout mPasswordField;
         private TextInputLayout mConfirmPasswordField;
 
+        private Form mForm;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RegisterActivity_Layout);
             initializeFields();
+
+            Field field = new Field(mFirstNameField);
+            mForm.AddField(field);
         }
 
         private void initializeFields()
