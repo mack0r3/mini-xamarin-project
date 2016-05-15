@@ -2566,6 +2566,9 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f070021
 			public const int emailInputLabelText = 2131165217;
 			
+			// aapt resource value: 0x7f070023
+			public const int emptyFieldErrorMessage = 2131165219;
+			
 			// aapt resource value: 0x7f07001f
 			public const int firstNameInputLabelText = 2131165215;
 			

@@ -15,13 +15,13 @@ namespace MiNI___Xamarin_Project.Validator.validations
     abstract class BaseValidation : IValidation
     {
         protected Context mContext;
-        
+                
         protected BaseValidation(Context context)
         {
             mContext = context;
         }
-        public abstract String GetErrorMessage();
+        public abstract string GetErrorMessage();
 
-        public abstract Boolean IsValid(String text);
+        public abstract bool IsValid(string text);
     }
 }

@@ -16,4 +16,7 @@
   <string name="lastNameInputLabelText">Last name</string>
   <string name="emailInputLabelText">Email</string>
   <string name="confirmPasswordInputLabelText">Confirm password</string>
+  
+  <!--Form Validator -->
+  <string name="emptyFieldErrorMessage">This field cannot be empty.</string>
 </resources>
