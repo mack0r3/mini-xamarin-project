@@ -14,5 +14,8 @@ namespace MiNI___Xamarin_Project.Validator.validations
 {
     interface IValidation
     {
+        String GetErrorMessage();
+
+        Boolean IsValid(String text);
     }
 }
