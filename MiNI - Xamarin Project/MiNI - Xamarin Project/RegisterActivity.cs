@@ -30,19 +30,34 @@ namespace MiNI___Xamarin_Project
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RegisterActivity_Layout);
-            initializeFields();
-
-            Field field = new Field(mFirstNameField);
-            mForm.AddField(field);
+            initializeEditTexts();
+            initializeForm();
         }
 
-        private void initializeFields()
+        private void initializeEditTexts()
         {
             mFirstNameField = FindViewById<TextInputLayout>(Resource.Id.firstNameField);
             mLastNameField = FindViewById<TextInputLayout>(Resource.Id.lastNameField);
             mEmailField = FindViewById<TextInputLayout>(Resource.Id.emailField);
             mPasswordField = FindViewById<TextInputLayout>(Resource.Id.passwordField);
             mConfirmPasswordField = FindViewById<TextInputLayout>(Resource.Id.confirmPasswordField);
+        }
+
+        private void initializeForm()
+        {
+            Field firstNameField = new Field(mFirstNameField);
+            Field lastNameField = new Field(mLastNameField);
+            Field emailField = new Field(mEmailField);
+            Field passwordField = new Field(mPasswordField);
+            Field confirmPasswordField = new Field(mConfirmPasswordField);
+
+            mForm = new Form();
+
+            mForm.AddField(firstNameField);
+            mForm.AddField(lastNameField);
+            mForm.AddField(emailField);
+            mForm.AddField(passwordField);
+            mForm.AddField(confirmPasswordField);
         }
 
     }
