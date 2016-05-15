@@ -12,17 +12,18 @@ using Android.Widget;
 using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 using MiNI___Xamarin_Project.Validator;
+using MiNI___Xamarin_Project.Validator.validations;
 
 namespace MiNI___Xamarin_Project
 {
     [Activity(Label = "RegisterActivity", Theme = "@style/AppBaseTheme", WindowSoftInputMode = SoftInput.AdjustResize)]
     public class RegisterActivity : AppCompatActivity
     {
-        private TextInputLayout mFirstNameField;
-        private TextInputLayout mLastNameField;
-        private TextInputLayout mEmailField;
-        private TextInputLayout mPasswordField;
-        private TextInputLayout mConfirmPasswordField;
+        private EditText mFirstNameEditText;
+        private EditText mLastNameEditText;
+        private EditText mEmailEditText;
+        private EditText mPasswordEditText;
+        private EditText mConfirmPasswordEditText;
 
         private Form mForm;
 
@@ -30,26 +31,27 @@ namespace MiNI___Xamarin_Project
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RegisterActivity_Layout);
+
             initializeEditTexts();
             initializeForm();
         }
 
         private void initializeEditTexts()
         {
-            mFirstNameField = FindViewById<TextInputLayout>(Resource.Id.firstNameField);
-            mLastNameField = FindViewById<TextInputLayout>(Resource.Id.lastNameField);
-            mEmailField = FindViewById<TextInputLayout>(Resource.Id.emailField);
-            mPasswordField = FindViewById<TextInputLayout>(Resource.Id.passwordField);
-            mConfirmPasswordField = FindViewById<TextInputLayout>(Resource.Id.confirmPasswordField);
+            mFirstNameEditText = FindViewById<EditText>(Resource.Id.firstNameEditText);
+            mLastNameEditText = FindViewById<EditText>(Resource.Id.lastNameEditText);
+            mEmailEditText = FindViewById<EditText>(Resource.Id.emailEditText);
+            mPasswordEditText = FindViewById<EditText>(Resource.Id.passwordEditText);
+            mConfirmPasswordEditText = FindViewById<EditText>(Resource.Id.confirmPasswordEditText);
         }
 
         private void initializeForm()
         {
-            Field firstNameField = new Field(mFirstNameField);
-            Field lastNameField = new Field(mLastNameField);
-            Field emailField = new Field(mEmailField);
-            Field passwordField = new Field(mPasswordField);
-            Field confirmPasswordField = new Field(mConfirmPasswordField);
+            Field firstNameField = new Field(mFirstNameEditText);
+            Field lastNameField = new Field(mLastNameEditText);
+            Field emailField = new Field(mEmailEditText);
+            Field passwordField = new Field(mPasswordEditText);
+            Field confirmPasswordField = new Field(mConfirmPasswordEditText);
 
             mForm = new Form();
 
