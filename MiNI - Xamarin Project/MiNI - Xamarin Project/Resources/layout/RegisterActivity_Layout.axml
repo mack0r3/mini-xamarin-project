@@ -8,12 +8,12 @@
         android:orientation="vertical"
         android:padding="@dimen/appPrimaryMargin">
         <LinearLayout
-            android:id="@+id/fullNameTextInputsRow"
+            android:id="@+id/fullNameFieldsRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/firstNameTextInputLayout"
+                android:id="@+id/firstNameField"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -25,7 +25,7 @@
                     android:hint="@string/firstNameInputLabelText" />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/lastNameTextInputLayout"
+                android:id="@+id/lastNameField"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -38,7 +38,7 @@
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/emailTextInputLayout"
+            android:id="@+id/emailField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginBetweenInputFields"
@@ -50,13 +50,13 @@
                 android:hint="@string/emailInputLabelText" />
         </android.support.design.widget.TextInputLayout>
         <LinearLayout
-            android:id="@+id/passwordTextInputsRow"
+            android:id="@+id/passwordFieldsRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginBetweenInputFields"
             android:orientation="horizontal">
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/passwordTextInputLayout"
+                android:id="@+id/passwordField"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -68,7 +68,7 @@
                     android:hint="@string/passwordInputLabelText" />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/confirmPasswordTextInputLayout"
+                android:id="@+id/confirmPasswordField"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

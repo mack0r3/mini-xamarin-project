@@ -17,36 +17,26 @@ namespace MiNI___Xamarin_Project
     [Activity(Label = "RegisterActivity", Theme = "@style/AppBaseTheme", WindowSoftInputMode = SoftInput.AdjustResize)]
     public class RegisterActivity : AppCompatActivity
     {
-        private Button RegisterButton;
-
-        private TextInputLayout FirstNameInput;
-        private TextInputLayout LastNameInput;
-        private TextInputLayout EmailInput;
-        private TextInputLayout PasswordInput;
-        private TextInputLayout ConfirmPasswordInput;
+        private TextInputLayout mFirstNameField;
+        private TextInputLayout mLastNameField;
+        private TextInputLayout mEmailField;
+        private TextInputLayout mPasswordField;
+        private TextInputLayout mConfirmPasswordField;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RegisterActivity_Layout);
-
-            RegisterButton = FindViewById<Button>(Resource.Id.registerButton);
-            RegisterButton.Click += RegisterButton_Click;
-
-            FirstNameInput = FindViewById<TextInputLayout>(Resource.Id.firstNameTextInputLayout);
-            LastNameInput = FindViewById<TextInputLayout>(Resource.Id.lastNameTextInputLayout);
-            EmailInput = FindViewById<TextInputLayout>(Resource.Id.emailTextInputLayout);
-            PasswordInput = FindViewById<TextInputLayout>(Resource.Id.passwordTextInputLayout);
-            ConfirmPasswordInput = FindViewById<TextInputLayout>(Resource.Id.confirmPasswordTextInputLayout);
+            initializeFields();
         }
 
-        private void RegisterButton_Click(object sender, EventArgs e)
+        private void initializeFields()
         {
-            FirstNameInput.Error = "This field is required.";
-            LastNameInput.Error = "This field is required.";
-            EmailInput.Error = "This field is required.";
-            PasswordInput.Error = "This field is required.";
-            ConfirmPasswordInput.Error = "This field is required.";
+            mFirstNameField = FindViewById<TextInputLayout>(Resource.Id.firstNameField);
+            mLastNameField = FindViewById<TextInputLayout>(Resource.Id.lastNameField);
+            mEmailField = FindViewById<TextInputLayout>(Resource.Id.emailField);
+            mPasswordField = FindViewById<TextInputLayout>(Resource.Id.passwordField);
+            mConfirmPasswordField = FindViewById<TextInputLayout>(Resource.Id.confirmPasswordField);
         }
     }
 }
