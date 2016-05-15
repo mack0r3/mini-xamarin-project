@@ -82,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validator\Field.cs" />
     <Compile Include="Validator\Form.cs" />
+    <Compile Include="Validator\validations\BaseValidation.cs" />
+    <Compile Include="Validator\validations\IValidation.cs" />
+    <Compile Include="Validator\validations\NotEmpty.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
