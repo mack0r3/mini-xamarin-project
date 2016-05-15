@@ -29,5 +29,17 @@ namespace MiNI___Xamarin_Project.Validator
             mValidations.Add(condition);
             return this;
         }
+
+        public bool IsValid()
+        {
+            foreach( IValidation validation in mValidations)
+            {
+                if(!validation.IsValid(mEditText.Text))
+                {
+                    throw new FieldValidationException(validation.GetErrorMessage());
+                }
+            }
+            return true;
+        }
     }
 }
