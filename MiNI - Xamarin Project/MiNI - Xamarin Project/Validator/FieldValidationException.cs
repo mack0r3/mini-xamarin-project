@@ -14,8 +14,16 @@ namespace MiNI___Xamarin_Project.Validator
 {
     class FieldValidationException : Exception
     {
-        public FieldValidationException(string message) : base(message)
+        private EditText mEditText;
+
+        public FieldValidationException(string message, EditText editText) : base(message)
         {
+            mEditText = editText;
+        }
+
+        public EditText GetEditText()
+        {
+            return mEditText;
         }
     }
 }

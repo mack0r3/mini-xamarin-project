@@ -2,6 +2,7 @@
 <resources>
   <color name="appPrimaryColor">#2196F3</color>
   <color name="appBackgroundColor">#333333</color>
+  <color name="errorsColor">#FF6E6E</color>
 
   <!-- TextColors -->
   <color name="primaryTextColor">#FFFFFFFF</color>

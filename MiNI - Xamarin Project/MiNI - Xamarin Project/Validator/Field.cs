@@ -16,7 +16,7 @@ namespace MiNI___Xamarin_Project.Validator
 {
     class Field
     {
-        private EditText mEditText;
+        private EditText mEditText { get; }
         private List<IValidation> mValidations = new List<IValidation>();
 
         public Field(EditText editText)
@@ -36,7 +36,7 @@ namespace MiNI___Xamarin_Project.Validator
             {
                 if(!validation.IsValid(mEditText.Text))
                 {
-                    throw new FieldValidationException(validation.GetErrorMessage());
+                    throw new FieldValidationException(validation.GetErrorMessage(), mEditText);
                 }
             }
             return true;

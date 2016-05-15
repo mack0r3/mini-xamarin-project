@@ -10,7 +10,9 @@
   <style name="floatingLabelTextInput_style">
     <item name="android:textSize">16sp</item>
     <item name="android:textColorHint">@color/hintTextColor</item>
-
+    <item name="colorControlNormal">@color/errorsColor</item>
+    <item name="textColorError">@color/errorsColor</item>
+    
     <item name="colorControlNormal">@color/hintTextColor</item>
     <item name="colorControlActivated">@color/appPrimaryColor</item>
   </style>

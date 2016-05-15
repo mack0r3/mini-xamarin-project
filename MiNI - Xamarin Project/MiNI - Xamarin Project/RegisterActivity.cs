@@ -27,6 +27,8 @@ namespace MiNI___Xamarin_Project
 
         private Form mForm;
 
+        private Button button;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -34,6 +36,14 @@ namespace MiNI___Xamarin_Project
 
             initializeEditTexts();
             initializeForm();
+
+            button = FindViewById<Button>(Resource.Id.registerButton);
+            button.Click += Button_Click;
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            mForm.IsValid();
         }
 
         private void initializeEditTexts()
@@ -52,6 +62,12 @@ namespace MiNI___Xamarin_Project
             Field emailField = new Field(mEmailEditText);
             Field passwordField = new Field(mPasswordEditText);
             Field confirmPasswordField = new Field(mConfirmPasswordEditText);
+
+            firstNameField.Validate(new NotEmpty(this));
+            lastNameField.Validate(new NotEmpty(this));
+            emailField.Validate(new NotEmpty(this));
+            passwordField.Validate(new NotEmpty(this));
+            confirmPasswordField.Validate(new NotEmpty(this));
 
             mForm = new Form();
 
