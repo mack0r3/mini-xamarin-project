@@ -38,5 +38,6 @@ namespace MiNI___Xamarin_Project
             mPasswordField = FindViewById<TextInputLayout>(Resource.Id.passwordField);
             mConfirmPasswordField = FindViewById<TextInputLayout>(Resource.Id.confirmPasswordField);
         }
+
     }
 }
