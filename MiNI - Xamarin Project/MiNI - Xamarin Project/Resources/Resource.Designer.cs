@@ -1912,6 +1912,9 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f06001e
 			public const int always = 2131099678;
 			
+			// aapt resource value: 0x7f060074
+			public const int backButton = 2131099764;
+			
 			// aapt resource value: 0x7f06001b
 			public const int beginning = 2131099675;
 			
@@ -2061,9 +2064,6 @@ namespace MiNI___Xamarin_Project
 			
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
-			
-			// aapt resource value: 0x7f060074
-			public const int loginButton = 2131099764;
 			
 			// aapt resource value: 0x7f06007a
 			public const int media_actions = 2131099770;

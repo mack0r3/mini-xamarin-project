@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="@dimen/appPrimaryMargin">
     <android.support.design.widget.TextInputLayout
         android:id="@+id/usernameTextInputLayout"
@@ -17,7 +18,6 @@
     <android.support.design.widget.TextInputLayout
         android:id="@+id/passwordTextInputLayout"
         android:layout_marginTop="@dimen/marginBetweenInputFields"
-        android:layout_below="@id/usernameTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/floatingLabelTextInput_style">
@@ -27,12 +27,22 @@
             android:textColor="@color/primaryTextColor"
             android:hint="@string/passwordInputLabelText" />
     </android.support.design.widget.TextInputLayout>
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:theme="@style/AppTheme.PrimaryButton"
-        android:text="@string/loginButtonText" />
-</RelativeLayout>
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/logRegButtonMarginTop">
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.BackButton"
+            android:text="@string/backButtonText" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.PrimaryButton"
+            android:text="@string/loginButtonText" />
+    </LinearLayout>
+</LinearLayout>

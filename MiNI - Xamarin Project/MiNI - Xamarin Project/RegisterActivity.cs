@@ -20,6 +20,14 @@ namespace MiNI___Xamarin_Project
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RegisterActivity_Layout);
+
+            Button button = FindViewById<Button>(Resource.Id.backButton);
+            button.Click += Button_Click;
+        }
+
+        private void Button_Click(object sender, System.EventArgs e)
+        {
+            Finish();
         }
     }
 }
