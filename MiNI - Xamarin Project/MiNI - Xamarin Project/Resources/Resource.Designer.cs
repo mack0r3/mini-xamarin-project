@@ -988,32 +988,32 @@ namespace MiNI___Xamarin_Project
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b0049
-			public const int abc_background_cache_hint_selector_material_dark = 2131427401;
-			
 			// aapt resource value: 0x7f0b004a
-			public const int abc_background_cache_hint_selector_material_light = 2131427402;
+			public const int abc_background_cache_hint_selector_material_dark = 2131427402;
 			
 			// aapt resource value: 0x7f0b004b
-			public const int abc_color_highlight_material = 2131427403;
+			public const int abc_background_cache_hint_selector_material_light = 2131427403;
+			
+			// aapt resource value: 0x7f0b004c
+			public const int abc_color_highlight_material = 2131427404;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_input_method_navigation_guard = 2131427328;
 			
-			// aapt resource value: 0x7f0b004c
-			public const int abc_primary_text_disable_only_material_dark = 2131427404;
-			
 			// aapt resource value: 0x7f0b004d
-			public const int abc_primary_text_disable_only_material_light = 2131427405;
+			public const int abc_primary_text_disable_only_material_dark = 2131427405;
 			
 			// aapt resource value: 0x7f0b004e
-			public const int abc_primary_text_material_dark = 2131427406;
+			public const int abc_primary_text_disable_only_material_light = 2131427406;
 			
 			// aapt resource value: 0x7f0b004f
-			public const int abc_primary_text_material_light = 2131427407;
+			public const int abc_primary_text_material_dark = 2131427407;
 			
 			// aapt resource value: 0x7f0b0050
-			public const int abc_search_url_text = 2131427408;
+			public const int abc_primary_text_material_light = 2131427408;
+			
+			// aapt resource value: 0x7f0b0051
+			public const int abc_search_url_text = 2131427409;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_search_url_text_normal = 2131427329;
@@ -1024,11 +1024,11 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f0b0003
 			public const int abc_search_url_text_selected = 2131427331;
 			
-			// aapt resource value: 0x7f0b0051
-			public const int abc_secondary_text_material_dark = 2131427409;
-			
 			// aapt resource value: 0x7f0b0052
-			public const int abc_secondary_text_material_light = 2131427410;
+			public const int abc_secondary_text_material_dark = 2131427410;
+			
+			// aapt resource value: 0x7f0b0053
+			public const int abc_secondary_text_material_light = 2131427411;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int accent_material_dark = 2131427332;
@@ -1041,6 +1041,9 @@ namespace MiNI___Xamarin_Project
 			
 			// aapt resource value: 0x7f0b0044
 			public const int appPrimaryColor = 2131427396;
+			
+			// aapt resource value: 0x7f0b0049
+			public const int backButtonBackgroundColor = 2131427401;
 			
 			// aapt resource value: 0x7f0b0006
 			public const int background_floating_material_dark = 2131427334;
@@ -1231,11 +1234,11 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f0b0037
 			public const int switch_thumb_disabled_material_light = 2131427383;
 			
-			// aapt resource value: 0x7f0b0053
-			public const int switch_thumb_material_dark = 2131427411;
-			
 			// aapt resource value: 0x7f0b0054
-			public const int switch_thumb_material_light = 2131427412;
+			public const int switch_thumb_material_dark = 2131427412;
+			
+			// aapt resource value: 0x7f0b0055
+			public const int switch_thumb_material_light = 2131427413;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int switch_thumb_normal_material_dark = 2131427384;
@@ -1945,8 +1948,8 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f06001f
 			public const int collapseActionView = 2131099679;
 			
-			// aapt resource value: 0x7f060088
-			public const int confirmPasswordTextInputLayout = 2131099784;
+			// aapt resource value: 0x7f060087
+			public const int confirmPasswordTextInputLayout = 2131099783;
 			
 			// aapt resource value: 0x7f06004a
 			public const int contentPanel = 2131099722;
@@ -1984,8 +1987,8 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f06005c
 			public const int edit_query = 2131099740;
 			
-			// aapt resource value: 0x7f060086
-			public const int emailTextInputLayout = 2131099782;
+			// aapt resource value: 0x7f060085
+			public const int emailTextInputLayout = 2131099781;
 			
 			// aapt resource value: 0x7f06001c
 			public const int end = 2131099676;
@@ -2020,8 +2023,8 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f060038
 			public const int @fixed = 2131099704;
 			
-			// aapt resource value: 0x7f060085
-			public const int fullNameTextInputsRow = 2131099781;
+			// aapt resource value: 0x7f060084
+			public const int fullNameTextInputsRow = 2131099780;
 			
 			// aapt resource value: 0x7f060005
 			public const int home = 2131099653;
@@ -2095,8 +2098,8 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f060073
 			public const int passwordTextInputLayout = 2131099763;
 			
-			// aapt resource value: 0x7f060087
-			public const int passwordTextInputsRow = 2131099783;
+			// aapt resource value: 0x7f060086
+			public const int passwordTextInputsRow = 2131099782;
 			
 			// aapt resource value: 0x7f060029
 			public const int pin = 2131099689;
@@ -2109,9 +2112,6 @@ namespace MiNI___Xamarin_Project
 			
 			// aapt resource value: 0x7f060054
 			public const int radio = 2131099732;
-			
-			// aapt resource value: 0x7f060084
-			public const int registerForm = 2131099780;
 			
 			// aapt resource value: 0x7f060030
 			public const int right = 2131099696;
@@ -2539,44 +2539,47 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f070014
 			public const int appbar_scrolling_view_behavior = 2131165204;
 			
+			// aapt resource value: 0x7f07001a
+			public const int backButtonText = 2131165210;
+			
 			// aapt resource value: 0x7f070015
 			public const int bottom_sheet_behavior = 2131165205;
 			
 			// aapt resource value: 0x7f070016
 			public const int character_counter_pattern = 2131165206;
 			
+			// aapt resource value: 0x7f070022
+			public const int confirmPasswordInputLabelText = 2131165218;
+			
 			// aapt resource value: 0x7f070021
-			public const int confirmPasswordInputLabelText = 2131165217;
+			public const int emailInputLabelText = 2131165217;
 			
-			// aapt resource value: 0x7f070020
-			public const int emailInputLabelText = 2131165216;
-			
-			// aapt resource value: 0x7f07001e
-			public const int firstNameInputLabelText = 2131165214;
+			// aapt resource value: 0x7f07001f
+			public const int firstNameInputLabelText = 2131165215;
 			
 			// aapt resource value: 0x7f070017
 			public const int font_fontFamily_medium = 2131165207;
 			
-			// aapt resource value: 0x7f07001f
-			public const int lastNameInputLabelText = 2131165215;
+			// aapt resource value: 0x7f070020
+			public const int lastNameInputLabelText = 2131165216;
 			
-			// aapt resource value: 0x7f07001a
-			public const int loginButtonText = 2131165210;
+			// aapt resource value: 0x7f07001b
+			public const int loginButtonText = 2131165211;
 			
 			// aapt resource value: 0x7f070018
 			public const int mainAppColor = 2131165208;
 			
-			// aapt resource value: 0x7f07001c
-			public const int passwordInputLabelText = 2131165212;
-			
 			// aapt resource value: 0x7f07001d
-			public const int registerButtonText = 2131165213;
+			public const int passwordInputLabelText = 2131165213;
+			
+			// aapt resource value: 0x7f07001e
+			public const int registerButtonText = 2131165214;
 			
 			// aapt resource value: 0x7f070013
 			public const int status_bar_notification_info_overflow = 2131165203;
 			
-			// aapt resource value: 0x7f07001b
-			public const int usernameInputLabelText = 2131165211;
+			// aapt resource value: 0x7f07001c
+			public const int usernameInputLabelText = 2131165212;
 			
 			static String()
 			{
@@ -2609,8 +2612,11 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f090157
 			public const int AppBaseTheme = 2131296599;
 			
+			// aapt resource value: 0x7f09015a
+			public const int AppTheme_BackButton = 2131296602;
+			
 			// aapt resource value: 0x7f090159
-			public const int AppTheme_Button = 2131296601;
+			public const int AppTheme_PrimaryButton = 2131296601;
 			
 			// aapt resource value: 0x7f09008a
 			public const int Base_AlertDialog_AppCompat = 2131296394;

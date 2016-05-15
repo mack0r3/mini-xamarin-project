@@ -2,6 +2,7 @@
 <resources>
   <string name="mainAppColor">#2596ED</string>
   <string name="ApplicationName">MiNI - Xamarin Project</string>
+  <string name="backButtonText">Back</string>
 
   <!--Login Activity Strings-->
   <string name="loginButtonText">LOGIN</string>

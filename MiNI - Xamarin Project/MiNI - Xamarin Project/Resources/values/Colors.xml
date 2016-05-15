@@ -7,4 +7,7 @@
   <color name="primaryTextColor">#FFFFFFFF</color>
   <color name="secondaryTextColor">#B3FFFFFF</color>
   <color name="hintTextColor">#80FFFFFF</color>
+  
+  <!-- BackButton -->
+  <color name="backButtonBackgroundColor">#26CCCCCC</color>
 </resources>

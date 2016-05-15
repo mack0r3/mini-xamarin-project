@@ -15,9 +15,14 @@
     <item name="colorControlActivated">@color/appPrimaryColor</item>
   </style>
 
-  <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+  <style name="AppTheme.PrimaryButton" parent="Widget.AppCompat.Button.Colored">
     <item name="android:textColor">@color/primaryTextColor</item>
     <item name="colorButtonNormal">@color/appPrimaryColor</item>
+  </style>
+
+  <style name="AppTheme.BackButton" parent="Widget.AppCompat.Button.Colored">
+    <item name="android:textColor">@color/primaryTextColor</item>
+    <item name="colorButtonNormal">@color/backButtonBackgroundColor</item>
   </style>
 
 </resources>

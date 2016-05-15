@@ -5,6 +5,6 @@
 
   <!-- Login/Register screen -->
   <dimen name="marginBetweenInputFields">16dp</dimen>
-  <dimen name="logRegButtonMarginTop">32dp</dimen>
+  <dimen name="logRegButtonMarginTop">24dp</dimen>
   
 </resources>
