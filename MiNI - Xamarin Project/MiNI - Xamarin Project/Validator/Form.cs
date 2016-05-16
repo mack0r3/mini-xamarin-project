@@ -17,6 +17,11 @@ namespace MiNI___Xamarin_Project.Validator
     {
         private List<Field> mFields = new List<Field>();
 
+        public List<Field> GetFields()
+        {
+            return mFields;
+        }
+
         public void AddField(Field field)
         {
             mFields.Add(field);
@@ -35,11 +40,9 @@ namespace MiNI___Xamarin_Project.Validator
             catch (FieldValidationException ex)
             {
                 result = false;
-                TextInputLayout textInputLayout = (TextInputLayout)ex.GetEditText().Parent;
-                textInputLayout.Error = ex.Message;
             }
-
             return result;
         }
+
     }
 }

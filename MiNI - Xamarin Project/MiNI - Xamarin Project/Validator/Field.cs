@@ -16,12 +16,17 @@ namespace MiNI___Xamarin_Project.Validator
 {
     class Field
     {
-        private EditText mEditText { get; }
+        private EditText mEditText;
         private List<IValidation> mValidations = new List<IValidation>();
 
         public Field(EditText editText)
         {
             mEditText = editText;
+        }
+
+        public EditText GetEditText()
+        {
+            return mEditText;
         }
 
         public Field Validate(IValidation condition)

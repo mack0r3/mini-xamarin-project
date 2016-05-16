@@ -36,14 +36,44 @@ namespace MiNI___Xamarin_Project
 
             initializeEditTexts();
             initializeForm();
+            handleLostFocusEvent();
+
 
             button = FindViewById<Button>(Resource.Id.registerButton);
             button.Click += Button_Click;
         }
 
+        private void handleLostFocusEvent()
+        {
+            foreach(Field field in mForm.GetFields())
+            {
+                TextInputLayout input = (TextInputLayout)field.GetEditText().Parent;
+                field.GetEditText().FocusChange += (sender, e) => {
+                    if(!e.HasFocus)
+                    {
+                        
+                        try
+                        {
+                            if(field.IsValid())
+                            {
+                                Console.WriteLine("Dobrze posz³o");
+                                input.ErrorEnabled = false;
+                                input.Error = null;
+                            }
+                        }
+                        catch (FieldValidationException ex)
+                        {
+                            input.Error = ex.Message;
+                        }
+                    }
+                };
+            }
+        }
+
+
         private void Button_Click(object sender, EventArgs e)
         {
-            mForm.IsValid();
+            if (mForm.IsValid()) Console.WriteLine("Register completed!");
         }
 
         private void initializeEditTexts()
