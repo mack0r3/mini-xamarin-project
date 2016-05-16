@@ -48,7 +48,7 @@ namespace MiNI___Xamarin_Project
             foreach(Field field in mForm.GetFields())
             {
                 TextInputLayout input = (TextInputLayout)field.GetEditText().Parent;
-                field.GetEditText().FocusChange += (sender, e) => {
+                field.GetEditText().FocusChange += (sender, e) => {                    
                     if(!e.HasFocus)
                     {
                         
@@ -56,10 +56,11 @@ namespace MiNI___Xamarin_Project
                         {
                             if(field.IsValid())
                             {
-                                Console.WriteLine("Dobrze posz³o");
-                                input.ErrorEnabled = false;
                                 input.Error = null;
+                                field.GetEditText().Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
+
                             }
+                        
                         }
                         catch (FieldValidationException ex)
                         {

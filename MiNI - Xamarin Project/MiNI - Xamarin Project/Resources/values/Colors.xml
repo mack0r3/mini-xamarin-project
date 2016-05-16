@@ -3,6 +3,7 @@
   <color name="appPrimaryColor">#2196F3</color>
   <color name="appBackgroundColor">#333333</color>
   <color name="errorsColor">#FF6E6E</color>
+  <color name="successColor">#4CAF50</color>
 
   <!-- TextColors -->
   <color name="primaryTextColor">#FFFFFFFF</color>
