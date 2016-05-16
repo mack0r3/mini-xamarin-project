@@ -36,6 +36,7 @@
                     android:id="@+id/lastNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:singleLine="true"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/lastNameInputLabelText" />
             </android.support.design.widget.TextInputLayout>
@@ -51,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/primaryTextColor"
+                android:singleLine="true"
                 android:hint="@string/emailInputLabelText" />
         </android.support.design.widget.TextInputLayout>
         <LinearLayout
@@ -69,6 +71,7 @@
                     android:id="@+id/passwordEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:singleLine="true"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/passwordInputLabelText" />
             </android.support.design.widget.TextInputLayout>
@@ -82,6 +85,7 @@
                     android:id="@+id/confirmPasswordEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:singleLine="true"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/confirmPasswordInputLabelText" />
             </android.support.design.widget.TextInputLayout>

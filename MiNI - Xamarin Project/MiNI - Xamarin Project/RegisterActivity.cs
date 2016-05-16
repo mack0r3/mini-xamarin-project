@@ -57,6 +57,7 @@ namespace MiNI___Xamarin_Project
                             if(field.IsValid())
                             {
                                 input.Error = null;
+                                //Set the remaining red underline to blue if succedeed.
                                 field.GetEditText().Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
 
                             }
