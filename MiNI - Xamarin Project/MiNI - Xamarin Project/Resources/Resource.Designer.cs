@@ -1954,11 +1954,11 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f06001f
 			public const int collapseActionView = 2131099679;
 			
-			// aapt resource value: 0x7f06008f
-			public const int confirmPasswordEditText = 2131099791;
-			
 			// aapt resource value: 0x7f06008e
-			public const int confirmPasswordField = 2131099790;
+			public const int confirmPasswordEditText = 2131099790;
+			
+			// aapt resource value: 0x7f06008f
+			public const int confirmPasswordField = 2131099791;
 			
 			// aapt resource value: 0x7f06004a
 			public const int contentPanel = 2131099722;
@@ -2065,11 +2065,11 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
 			
-			// aapt resource value: 0x7f060088
-			public const int lastNameEditText = 2131099784;
-			
 			// aapt resource value: 0x7f060087
-			public const int lastNameField = 2131099783;
+			public const int lastNameEditText = 2131099783;
+			
+			// aapt resource value: 0x7f060088
+			public const int lastNameField = 2131099784;
 			
 			// aapt resource value: 0x7f06002f
 			public const int left = 2131099695;
@@ -2122,11 +2122,11 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f06008d
 			public const int passwordEditText = 2131099789;
 			
-			// aapt resource value: 0x7f06008c
-			public const int passwordField = 2131099788;
-			
 			// aapt resource value: 0x7f06008b
-			public const int passwordFieldsRow = 2131099787;
+			public const int passwordField = 2131099787;
+			
+			// aapt resource value: 0x7f06008c
+			public const int passwordFieldsRow = 2131099788;
 			
 			// aapt resource value: 0x7f060073
 			public const int passwordTextInputLayout = 2131099763;

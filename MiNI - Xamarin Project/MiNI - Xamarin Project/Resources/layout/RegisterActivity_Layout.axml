@@ -23,6 +23,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
+                    android:nextFocusDown="@+id/lastNameEditText"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/firstNameInputLabelText" />
             </android.support.design.widget.TextInputLayout>
@@ -37,6 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
+                    android:nextFocusDown="@+id/emailField"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/lastNameInputLabelText" />
             </android.support.design.widget.TextInputLayout>
@@ -53,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/primaryTextColor"
                 android:singleLine="true"
+                android:nextFocusDown="@+id/passwordField"
                 android:hint="@string/emailInputLabelText" />
         </android.support.design.widget.TextInputLayout>
         <LinearLayout
@@ -72,6 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
+                    android:nextFocusDown="@+id/confirmPasswordEditText"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/passwordInputLabelText" />
             </android.support.design.widget.TextInputLayout>
