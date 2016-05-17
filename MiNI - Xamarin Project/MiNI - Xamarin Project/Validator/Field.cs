@@ -39,6 +39,7 @@ namespace MiNI___Xamarin_Project.Validator
         {
             foreach( IValidation validation in mValidations)
             {
+
                 if(!validation.IsValid(mEditText.Text))
                 {
                     throw new FieldValidationException(validation.GetErrorMessage(), mEditText);

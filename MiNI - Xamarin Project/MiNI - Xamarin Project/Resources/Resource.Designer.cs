@@ -2614,6 +2614,9 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f07001d
 			public const int passwordInputLabelText = 2131165213;
 			
+			// aapt resource value: 0x7f070025
+			public const int passwordsDoNotMatch = 2131165221;
+			
 			// aapt resource value: 0x7f07001e
 			public const int registerButtonText = 2131165214;
 			

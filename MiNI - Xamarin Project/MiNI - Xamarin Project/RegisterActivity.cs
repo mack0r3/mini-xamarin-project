@@ -43,22 +43,40 @@ namespace MiNI___Xamarin_Project
             initializeButtons();
             handleClickEvents();
 
-            mConfirmPasswordEditText.EditorAction += OnFinishEditing;
+            handleFinishEditing();
         }
 
-        private void OnFinishEditing(object sender, TextView.EditorActionEventArgs e)
+        private void handleFinishEditing()
         {
-            if (e.ActionId == ImeAction.Done)
+            Field lastField = mForm.GetFields().Last();
+            EditText lastEditText = lastField.GetEditText();
+            TextInputLayout textInputLayout = (TextInputLayout)lastEditText.Parent;
+
+            lastEditText.EditorAction += (sender, e) =>
             {
-                hideKeyboard();
-            }
+                try
+                {
+                    if (lastField.IsValid())
+                    {
+                        textInputLayout.Error = null;
+                        //Set the remaining red underline to blue if succedeed.
+                        lastEditText.Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
+                        hideKeyboard();
+                    }
+                }
+                catch (FieldValidationException ex)
+                {
+                    textInputLayout.Error = ex.Message;
+                }
+
+            };
         }
 
         private void handleLostFocusEvents()
         {
             foreach (Field field in mForm.GetFields())
             {
-                TextInputLayout input = (TextInputLayout)field.GetEditText().Parent;
+                TextInputLayout textInputLayout = (TextInputLayout)field.GetEditText().Parent;
                 field.GetEditText().FocusChange += (sender, e) =>
                 {
                     if (!e.HasFocus)
@@ -67,14 +85,14 @@ namespace MiNI___Xamarin_Project
                         {
                             if (field.IsValid())
                             {
-                                input.Error = null;
+                                textInputLayout.Error = null;
                                 //Set the remaining red underline to blue if succedeed.
                                 field.GetEditText().Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
                             }
                         }
                         catch (FieldValidationException ex)
                         {
-                            input.Error = ex.Message;
+                            textInputLayout.Error = ex.Message;
                         }
                     }
                 };
@@ -125,7 +143,8 @@ namespace MiNI___Xamarin_Project
             emailField.Validate(new NotEmpty(this))
                 .Validate(new IsEmail(this));
             passwordField.Validate(new NotEmpty(this));
-            confirmPasswordField.Validate(new NotEmpty(this));
+            confirmPasswordField.Validate(new NotEmpty(this))
+                .Validate(new IsTheSame(this, mPasswordEditText, mConfirmPasswordEditText));
 
             mForm = new Form();
 

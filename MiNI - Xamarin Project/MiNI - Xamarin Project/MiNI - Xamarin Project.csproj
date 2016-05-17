@@ -85,6 +85,7 @@
     <Compile Include="Validator\Form.cs" />
     <Compile Include="Validator\IsEmail.cs" />
     <Compile Include="Validator\validations\BaseValidation.cs" />
+    <Compile Include="Validator\validations\IsTheSame.cs" />
     <Compile Include="Validator\validations\IValidation.cs" />
     <Compile Include="Validator\validations\NotEmpty.cs" />
   </ItemGroup>
