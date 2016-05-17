@@ -15,152 +15,129 @@ using MiNI___Xamarin_Project.Validator;
 using MiNI___Xamarin_Project.Validator.validations;
 using Android.Views.InputMethods;
 
-namespace MiNI___Xamarin_Project
-{
-    [Activity(Label = "RegisterActivity", Theme = "@style/AppBaseTheme", WindowSoftInputMode = SoftInput.AdjustResize)]
-    public class RegisterActivity : AppCompatActivity
-    {
-        private EditText mFirstNameEditText;
-        private EditText mLastNameEditText;
-        private EditText mEmailEditText;
-        private EditText mPasswordEditText;
-        private EditText mConfirmPasswordEditText;
+namespace MiNI___Xamarin_Project {
+	[Activity(Label = "RegisterActivity", Theme = "@style/AppBaseTheme", WindowSoftInputMode = SoftInput.AdjustResize)]
+	public class RegisterActivity : AppCompatActivity {
+		private EditText mFirstNameEditText;
+		private EditText mLastNameEditText;
+		private EditText mEmailEditText;
+		private EditText mPasswordEditText;
+		private EditText mConfirmPasswordEditText;
 
-        private Form mForm;
+		private Form mForm;
 
-        private Button registerButton;
-        private Button backButton;
+		private Button registerButton;
+		private Button backButton;
 
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.RegisterActivity_Layout);
+		protected override void OnCreate(Bundle savedInstanceState) {
+			base.OnCreate(savedInstanceState);
+			SetContentView(Resource.Layout.RegisterActivity_Layout);
 
-            initializeEditTexts();
-            initializeForm();
-            handleLostFocusEvents();
+			initializeEditTexts();
+			initializeForm();
+			handleLostFocusEvents();
 
-            initializeButtons();
-            handleClickEvents();
+			initializeButtons();
+			handleClickEvents();
 
-            handleFinishEditing();
-        }
+			handleFinishEditing();
+		}
 
-        private void handleFinishEditing()
-        {
-            Field lastField = mForm.GetFields().Last();
-            EditText lastEditText = lastField.GetEditText();
-            TextInputLayout textInputLayout = (TextInputLayout)lastEditText.Parent;
+		private void handleFinishEditing() {
+			Field lastField = mForm.GetFields().Last();
+			EditText lastEditText = lastField.GetEditText();
+			TextInputLayout textInputLayout = (TextInputLayout)lastEditText.Parent;
 
-            lastEditText.EditorAction += (sender, e) =>
-            {
-                try
-                {
-                    if (lastField.IsValid())
-                    {
-                        textInputLayout.Error = null;
-                        //Set the remaining red underline to blue if succedeed.
-                        lastEditText.Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
-                        hideKeyboard();
-                    }
-                }
-                catch (FieldValidationException ex)
-                {
-                    textInputLayout.Error = ex.Message;
-                }
+			lastEditText.EditorAction += (sender, e) => {
+				try {
+					if (lastField.IsValid()) {
+						textInputLayout.Error = null;
+						//Set the remaining red underline to blue if succedeed.
+						lastEditText.Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
+						hideKeyboard();
+					}
+				}
+				catch (FieldValidationException ex) {
+					textInputLayout.Error = ex.Message;
+				}
 
-            };
-        }
+			};
+		}
 
-        private void handleLostFocusEvents()
-        {
-            foreach (Field field in mForm.GetFields())
-            {
-                TextInputLayout textInputLayout = (TextInputLayout)field.GetEditText().Parent;
-                field.GetEditText().FocusChange += (sender, e) =>
-                {
-                    if (!e.HasFocus)
-                    {
-                        try
-                        {
-                            if (field.IsValid())
-                            {
-                                textInputLayout.Error = null;
-                                //Set the remaining red underline to blue if succedeed.
-                                field.GetEditText().Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
-                            }
-                        }
-                        catch (FieldValidationException ex)
-                        {
-                            textInputLayout.Error = ex.Message;
-                        }
-                    }
-                };
-            }
-        }
+		private void handleLostFocusEvents() {
+			foreach (Field field in mForm.GetFields()) {
+				TextInputLayout textInputLayout = (TextInputLayout)field.GetEditText().Parent;
+				field.GetEditText().FocusChange += (sender, e) => {
+					if (!e.HasFocus) {
+						try {
+							if (field.IsValid()) {
+								textInputLayout.Error = null;
+								//Set the remaining red underline to blue if succedeed.
+								field.GetEditText().Background.SetColorFilter(Resources.GetColor(Resource.Color.appPrimaryColor), Android.Graphics.PorterDuff.Mode.SrcAtop);
+							}
+						}
+						catch (FieldValidationException ex) {
+							textInputLayout.Error = ex.Message;
+						}
+					}
+				};
+			}
+		}
 
-        private void handleClickEvents()
-        {
-            backButton.Click += backButtonOnClick;
-            registerButton.Click += registerButtonOnClick;
-        }
+		private void handleClickEvents() {
+			backButton.Click += backButtonOnClick;
+			registerButton.Click += registerButtonOnClick;
+		}
 
-        private void backButtonOnClick(object sender, EventArgs e)
-        {
-            Finish();
-        }
+		private void backButtonOnClick(object sender, EventArgs e) {
+			Finish();
+		}
 
-        private void registerButtonOnClick(object sender, EventArgs e)
-        {
-            if (mForm.IsValid()) Console.WriteLine("Register completed!");
-        }
+		private void registerButtonOnClick(object sender, EventArgs e) {
+			if (mForm.IsValid()) Console.WriteLine("Register completed!");
+		}
 
-        private void initializeButtons()
-        {
-            registerButton = FindViewById<Button>(Resource.Id.registerButton);
-            backButton = FindViewById<Button>(Resource.Id.backButton);
-        }
+		private void initializeButtons() {
+			registerButton = FindViewById<Button>(Resource.Id.registerButton);
+			backButton = FindViewById<Button>(Resource.Id.backButton);
+		}
 
-        private void initializeEditTexts()
-        {
-            mFirstNameEditText = FindViewById<EditText>(Resource.Id.firstNameEditText);
-            mLastNameEditText = FindViewById<EditText>(Resource.Id.lastNameEditText);
-            mEmailEditText = FindViewById<EditText>(Resource.Id.emailEditText);
-            mPasswordEditText = FindViewById<EditText>(Resource.Id.passwordEditText);
-            mConfirmPasswordEditText = FindViewById<EditText>(Resource.Id.confirmPasswordEditText);
-        }
+		private void initializeEditTexts() {
+			mFirstNameEditText = FindViewById<EditText>(Resource.Id.firstNameEditText);
+			mLastNameEditText = FindViewById<EditText>(Resource.Id.lastNameEditText);
+			mEmailEditText = FindViewById<EditText>(Resource.Id.emailEditText);
+			mPasswordEditText = FindViewById<EditText>(Resource.Id.passwordEditText);
+			mConfirmPasswordEditText = FindViewById<EditText>(Resource.Id.confirmPasswordEditText);
+		}
 
-        private void initializeForm()
-        {
-            Field firstNameField = new Field(mFirstNameEditText);
-            Field lastNameField = new Field(mLastNameEditText);
-            Field emailField = new Field(mEmailEditText);
-            Field passwordField = new Field(mPasswordEditText);
-            Field confirmPasswordField = new Field(mConfirmPasswordEditText);
+		private void initializeForm() {
+			Field firstNameField = new Field(mFirstNameEditText);
+			Field lastNameField = new Field(mLastNameEditText);
+			Field emailField = new Field(mEmailEditText);
+			Field passwordField = new Field(mPasswordEditText);
+			Field confirmPasswordField = new Field(mConfirmPasswordEditText);
 
-            firstNameField.Validate(new NotEmpty(this));
-            lastNameField.Validate(new NotEmpty(this));
-            emailField.Validate(new NotEmpty(this))
-                .Validate(new IsEmail(this));
-            passwordField.Validate(new NotEmpty(this));
-            confirmPasswordField.Validate(new NotEmpty(this))
-                .Validate(new IsTheSame(this, mPasswordEditText, mConfirmPasswordEditText));
+			firstNameField.Validate(new NotEmpty(this));
+			lastNameField.Validate(new NotEmpty(this));
+			emailField.Validate(new NotEmpty(this))
+				.Validate(new IsEmail(this));
+			passwordField.Validate(new NotEmpty(this));
+			confirmPasswordField.Validate(new NotEmpty(this))
+				.Validate(new IsTheSame(this, mPasswordEditText, mConfirmPasswordEditText));
 
-            mForm = new Form();
+			mForm = new Form();
 
-            mForm.AddField(firstNameField);
-            mForm.AddField(lastNameField);
-            mForm.AddField(emailField);
-            mForm.AddField(passwordField);
-            mForm.AddField(confirmPasswordField);
-        }
+			mForm.AddField(firstNameField);
+			mForm.AddField(lastNameField);
+			mForm.AddField(emailField);
+			mForm.AddField(passwordField);
+			mForm.AddField(confirmPasswordField);
+		}
 
-        private void hideKeyboard()
-        {
-            InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+		private void hideKeyboard() {
+			InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+			inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
+		}
 
-            inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
-        }
-
-    }
+	}
 }

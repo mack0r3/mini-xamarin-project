@@ -51,11 +51,12 @@
             android:theme="@style/floatingLabelTextInput_style">
             <EditText
                 android:id="@+id/emailEditText"
+                android:imeOptions="actionNext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/primaryTextColor"
                 android:singleLine="true"
-                android:nextFocusDown="@+id/passwordField"
+                android:nextFocusLeft="@+id/passwordField"
                 android:hint="@string/emailInputLabelText" />
         </android.support.design.widget.TextInputLayout>
         <LinearLayout
@@ -75,6 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
+                    android:fontFamily="sans-serif"
+                    android:inputType="textPassword"
                     android:nextFocusDown="@+id/confirmPasswordEditText"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/passwordInputLabelText" />
@@ -90,6 +93,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
+                    android:fontFamily="sans-serif"
+                    android:inputType="textPassword"
                     android:textColor="@color/primaryTextColor"
                     android:hint="@string/confirmPasswordInputLabelText" />
             </android.support.design.widget.TextInputLayout>
