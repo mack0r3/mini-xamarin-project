@@ -122,7 +122,8 @@ namespace MiNI___Xamarin_Project
 
             firstNameField.Validate(new NotEmpty(this));
             lastNameField.Validate(new NotEmpty(this));
-            emailField.Validate(new NotEmpty(this));
+            emailField.Validate(new NotEmpty(this))
+                .Validate(new IsEmail(this));
             passwordField.Validate(new NotEmpty(this));
             confirmPasswordField.Validate(new NotEmpty(this));
 

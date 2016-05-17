@@ -83,6 +83,7 @@
     <Compile Include="Validator\Field.cs" />
     <Compile Include="Validator\FieldValidationException.cs" />
     <Compile Include="Validator\Form.cs" />
+    <Compile Include="Validator\IsEmail.cs" />
     <Compile Include="Validator\validations\BaseValidation.cs" />
     <Compile Include="Validator\validations\IValidation.cs" />
     <Compile Include="Validator\validations\NotEmpty.cs" />

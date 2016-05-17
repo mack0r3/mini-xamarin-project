@@ -19,4 +19,6 @@
   
   <!--Form Validator -->
   <string name="emptyFieldErrorMessage">This field cannot be empty.</string>
+  <string name="invalidEmailErrorMessage">Email is invalid</string>
+  
 </resources>

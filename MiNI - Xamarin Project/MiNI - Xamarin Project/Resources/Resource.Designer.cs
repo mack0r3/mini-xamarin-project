@@ -2599,6 +2599,9 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f070017
 			public const int font_fontFamily_medium = 2131165207;
 			
+			// aapt resource value: 0x7f070024
+			public const int invalidEmailErrorMessage = 2131165220;
+			
 			// aapt resource value: 0x7f070020
 			public const int lastNameInputLabelText = 2131165216;
 			
