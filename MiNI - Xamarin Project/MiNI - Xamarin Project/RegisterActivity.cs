@@ -13,12 +13,17 @@ using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 using MiNI___Xamarin_Project.Validator;
 using MiNI___Xamarin_Project.Validator.validations;
+using RestSharp;
+using MiNI___Xamarin_Project.Services;
+using MiNI___Xamarin_Project.DTO;
 
 namespace MiNI___Xamarin_Project
 {
     [Activity(Label = "RegisterActivity", Theme = "@style/AppBaseTheme", WindowSoftInputMode = SoftInput.AdjustResize)]
     public class RegisterActivity : AppCompatActivity
     {
+        private RestClient mClient;
+
         private EditText mFirstNameEditText;
         private EditText mLastNameEditText;
         private EditText mEmailEditText;
@@ -27,8 +32,10 @@ namespace MiNI___Xamarin_Project
 
         private Form mForm;
 
-        private Button button;
+        private Button mRegisterButton;
 
+        private RegisterService mRegisterService;
+        private LoginService mLoginService;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,23 +45,26 @@ namespace MiNI___Xamarin_Project
             initializeForm();
             handleLostFocusEvent();
 
+            mClient = new RestClient("http://macies-001-site1.dtempurl.com/");
+            mRegisterService = new RegisterService();
 
-            button = FindViewById<Button>(Resource.Id.registerButton);
-            button.Click += Button_Click;
+            mRegisterButton = FindViewById<Button>(Resource.Id.registerButton);
+            mRegisterButton.Click += mRegisterButton_Click;
         }
 
         private void handleLostFocusEvent()
         {
-            foreach(Field field in mForm.GetFields())
+            foreach (Field field in mForm.GetFields())
             {
                 TextInputLayout input = (TextInputLayout)field.GetEditText().Parent;
-                field.GetEditText().FocusChange += (sender, e) => {
-                    if(!e.HasFocus)
+                field.GetEditText().FocusChange += (sender, e) =>
+                {
+                    if (!e.HasFocus)
                     {
-                        
+
                         try
                         {
-                            if(field.IsValid())
+                            if (field.IsValid())
                             {
                                 Console.WriteLine("Dobrze posz³o");
                                 input.ErrorEnabled = false;
@@ -71,9 +81,31 @@ namespace MiNI___Xamarin_Project
         }
 
 
-        private void Button_Click(object sender, EventArgs e)
+        private void mRegisterButton_Click(object sender, EventArgs e)
         {
-            if (mForm.IsValid()) Console.WriteLine("Register completed!");
+            if (mForm.IsValid())
+            {
+                string email = mEmailEditText.Text;
+                string password = mPasswordEditText.Text;
+
+                RegistrationDTO regDTO = new RegistrationDTO { Email = email, Password = password };
+                try
+                {
+                    mRegisterService.Register(regDTO);
+                    Console.WriteLine("Rejestracja zakonczyla sie wynikiem pozytywnym");
+
+                    mLoginService = new LoginService(email, password);
+                    mLoginService.Login();
+                    Console.WriteLine("Logowanie zakonczylo sie wynikiem pozytywnym");
+                    Finish();
+                    StartActivity(typeof(MenuActivity));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+
         }
 
         private void initializeEditTexts()
