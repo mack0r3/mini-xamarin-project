@@ -43,7 +43,7 @@ namespace MiNI___Xamarin_Project
 
             initializeEditTexts();
             initializeForm();
-            handleLostFocusEvent();
+            handleLostFocusEvents();
             
             mRegisterService = new RegisterService();
 
@@ -164,15 +164,6 @@ namespace MiNI___Xamarin_Project
 		{
 			mRegisterButton = FindViewById<Button>(Resource.Id.registerButton);
 			mBackButton = FindViewById<Button>(Resource.Id.backRegisterButton);
-		}
-
-		private void initializeEditTexts()
-		{
-			mFirstNameEditText = FindViewById<EditText>(Resource.Id.firstNameEditText);
-			mLastNameEditText = FindViewById<EditText>(Resource.Id.lastNameEditText);
-			mEmailEditText = FindViewById<EditText>(Resource.Id.emailEditText);
-			mPasswordEditText = FindViewById<EditText>(Resource.Id.passwordEditText);
-			mConfirmPasswordEditText = FindViewById<EditText>(Resource.Id.confirmPasswordEditText);
 		}
 
 		private void initializeForm()
