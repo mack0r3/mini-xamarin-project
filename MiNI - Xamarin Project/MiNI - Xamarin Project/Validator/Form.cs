@@ -13,36 +13,36 @@ using Android.Support.Design.Widget;
 
 namespace MiNI___Xamarin_Project.Validator
 {
-    class Form
-    {
-        private List<Field> mFields = new List<Field>();
+	class Form
+	{
+		private List<Field> mFields = new List<Field>();
 
-        public List<Field> GetFields()
-        {
-            return mFields;
-        }
+		public List<Field> GetFields()
+		{
+			return mFields;
+		}
 
-        public void AddField(Field field)
-        {
-            mFields.Add(field);
-        }
+		public void AddField(Field field)
+		{
+			mFields.Add(field);
+		}
 
-        public bool IsValid()
-        {
-            bool result = true;
-            try
-            {
-                foreach (Field field in mFields)
-                {
-                    result &= field.IsValid();
-                }
-            }
-            catch (FieldValidationException ex)
-            {
-                result = false;
-            }
-            return result;
-        }
+		public bool IsValid()
+		{
+			bool result = true;
+			try
+			{
+				foreach (Field field in mFields)
+				{
+					result &= field.IsValid();
+				}
+			}
+			catch (FieldValidationException ex)
+			{
+				result = false;
+			}
+			return result;
+		}
 
-    }
+	}
 }
