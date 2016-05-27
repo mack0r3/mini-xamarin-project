@@ -1916,7 +1916,10 @@ namespace MiNI___Xamarin_Project
 			public const int always = 2131099678;
 			
 			// aapt resource value: 0x7f060074
-			public const int backButton = 2131099764;
+			public const int backLoginButton = 2131099764;
+			
+			// aapt resource value: 0x7f060095
+			public const int backRegisterButton = 2131099797;
 			
 			// aapt resource value: 0x7f06001b
 			public const int beginning = 2131099675;
@@ -2146,8 +2149,8 @@ namespace MiNI___Xamarin_Project
 			// aapt resource value: 0x7f060054
 			public const int radio = 2131099732;
 			
-			// aapt resource value: 0x7f060095
-			public const int registerButton = 2131099797;
+			// aapt resource value: 0x7f060096
+			public const int registerButton = 2131099798;
 			
 			// aapt resource value: 0x7f060030
 			public const int right = 2131099696;

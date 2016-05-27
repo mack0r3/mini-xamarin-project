@@ -22,8 +22,7 @@ namespace MiNI___Xamarin_Project
     [Activity(Label = "RegisterActivity", Theme = "@style/AppBaseTheme", WindowSoftInputMode = SoftInput.AdjustResize)]
     public class RegisterActivity : AppCompatActivity
     {
-        private RestClient mClient;
-
+        
         private EditText mFirstNameEditText;
         private EditText mLastNameEditText;
         private EditText mEmailEditText;
@@ -33,6 +32,7 @@ namespace MiNI___Xamarin_Project
         private Form mForm;
 
         private Button mRegisterButton;
+        private Button mBackButton;
 
         private RegisterService mRegisterService;
         private LoginService mLoginService;
@@ -44,14 +44,17 @@ namespace MiNI___Xamarin_Project
             initializeEditTexts();
             initializeForm();
             handleLostFocusEvent();
-
-            mClient = new RestClient("http://macies-001-site1.dtempurl.com/");
+            
             mRegisterService = new RegisterService();
 
             mRegisterButton = FindViewById<Button>(Resource.Id.registerButton);
             mRegisterButton.Click += mRegisterButton_Click;
+
+            mBackButton = FindViewById<Button>(Resource.Id.backRegisterButton);
+            mBackButton.Click += mBackButton_Click;
         }
 
+        
         private void handleLostFocusEvent()
         {
             foreach (Field field in mForm.GetFields())
@@ -107,6 +110,12 @@ namespace MiNI___Xamarin_Project
             }
 
         }
+
+        private void mBackButton_Click(object sender, EventArgs e)
+        {
+            Finish();
+        }
+
 
         private void initializeEditTexts()
         {

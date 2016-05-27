@@ -22,7 +22,7 @@ namespace MiNI___Xamarin_Project
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.LoginActivity_Layout);
 
-            Button backButton = FindViewById<Button>(Resource.Id.backButton);
+            Button backButton = FindViewById<Button>(Resource.Id.backLoginButton);
             backButton.Click += Button_Click;
 
             Button loginButton = FindViewById<Button>(Resource.Id.loginButton);
