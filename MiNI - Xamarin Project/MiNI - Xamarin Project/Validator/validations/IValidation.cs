@@ -12,10 +12,10 @@ using Android.Widget;
 
 namespace MiNI___Xamarin_Project.Validator.validations
 {
-    interface IValidation
-    {
-        String GetErrorMessage();
+	interface IValidation
+	{
+		String GetErrorMessage();
 
-        Boolean IsValid(String text);
-    }
+		Boolean IsValid(String text);
+	}
 }

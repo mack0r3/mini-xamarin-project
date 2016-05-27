@@ -12,16 +12,16 @@ using Android.Widget;
 
 namespace MiNI___Xamarin_Project.Validator.validations
 {
-    abstract class BaseValidation : IValidation
-    {
-        protected Context mContext;
-                
-        protected BaseValidation(Context context)
-        {
-            mContext = context;
-        }
-        public abstract string GetErrorMessage();
+	abstract class BaseValidation : IValidation
+	{
+		protected Context mContext;
 
-        public abstract bool IsValid(string text);
-    }
+		protected BaseValidation(Context context)
+		{
+			mContext = context;
+		}
+		public abstract string GetErrorMessage();
+
+		public abstract bool IsValid(string text);
+	}
 }

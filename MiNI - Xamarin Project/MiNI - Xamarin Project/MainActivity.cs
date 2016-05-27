@@ -6,11 +6,13 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace MiNI___Xamarin_Project {
+namespace MiNI___Xamarin_Project
+{
 	[Activity(Label = "Initial Activity", MainLauncher = true)]
-	public class MainActivity : Activity {
-
-		protected override void OnCreate(Bundle bundle) {
+	public class MainActivity : Activity
+	{
+		protected override void OnCreate(Bundle bundle)
+		{
 			base.OnCreate(bundle);
 
 			SetContentView(Resource.Layout.Main);
@@ -24,11 +26,13 @@ namespace MiNI___Xamarin_Project {
 
 		}
 
-		private void RegisterButton_Click(object sender, EventArgs e) {
+		private void RegisterButton_Click(object sender, EventArgs e)
+		{
 			StartActivity(typeof(RegisterActivity));
 		}
 
-		private void LoginButton_Click(object sender, EventArgs e) {
+		private void LoginButton_Click(object sender, EventArgs e)
+		{
 			StartActivity(typeof(LoginActivity));
 		}
 
